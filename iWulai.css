@@ -1,10 +1,10 @@
 @charset "utf-8";
-/* author:iWulai */
+/* +-------------------------------------------------+ */
+/* | Author: iWulai <iwulai@qq.com> <www.iwulai.com> | */
+/* +-------------------------------------------------+ */
 /* 初始化标签默认属性 */
 :root{
-    --background-color:#fff;
     --font-size:100px;
-    --padding-value:0.08rem;
 }
 *{margin:0;padding:0;box-sizing:border-box;box-shadow:none;}
 html{font-size:100px;width:100%;height:100%;overflow:hidden;}
@@ -14,13 +14,13 @@ ul,ol,li{list-style:none;}
 input,textarea,button,select{border:none;outline:none;background:none;display:inline-block;-webkit-appearance:none;}
 label.disabled,input:disabled,textarea:disabled,button:disabled{background:#eee !important;cursor:not-allowed !important;}
 select{border:0.01rem solid #d4d4d4;border-radius:0.03rem;padding:0.04rem;}
-input[type="text"],input[type="password"]{padding:0.04rem var(--padding-value);border:0.01rem solid #d4d4d4;border-radius:0.03rem;width:1.80rem;}
+input[type="text"],input[type="password"]{padding:0.04rem 0.08rem;border:0.01rem solid #d4d4d4;border-radius:0.03rem;width:1.80rem;}
 input[type="text"]:focus,input[type="password"]:focus,textarea:focus{border-color:#38f;}
-input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.04rem var(--padding-value);border-radius:0.03rem;}
+input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.04rem 0.08rem;border-radius:0.03rem;}
 input[type="button"],input[type="submit"],input[type="reset"],input[type="radio"],input[type="checkbox"],button{cursor:pointer;}
 input[type="checkbox"]{width:0.13rem;height:0.13rem;}
 label input[type="radio"],label input[type="checkbox"]{vertical-align:-0.015rem;}
-textarea{resize:none;padding:0.06rem var(--padding-value);border:0.01rem solid #d4d4d4;border-radius:0.03rem;}
+textarea{resize:none;padding:0.06rem 0.08rem;border:0.01rem solid #d4d4d4;border-radius:0.03rem;}
 img{border:none;vertical-align:middle;max-width:100%;}
 a{text-decoration:none;-webkit-tap-highlight-color:rgba(100,100,255,0.5);}
 i{font-style:normal;}
@@ -28,7 +28,7 @@ b{font-weight:normal;}
 table{width:100%;empty-cells:show;border-collapse:collapse;border-spacing:0;text-align:center;border:0.01rem solid #d4d4d4;}
 table thead th,table thead td{background:#f4f8fd;}
 table tbody th,table tbody td{border:0.01rem solid #d4d4d4}
-th,td{text-align:center;padding:var(--padding-value);}
+th,td{text-align:center;padding:0.08rem;}
 /* placeholder兼容性处理 */
 ::-webkit-input-placeholder, /* WebKit browsers */
 :-moz-placeholder, /* Mozilla Firefox 4 to 18 */
@@ -43,35 +43,8 @@ th,td{text-align:center;padding:var(--padding-value);}
 .align-items{display:flex;align-items:stretch;} /*flex-start|flex-end|stretch|baseline|center*/
 .justify-content{display:flex;justify-content:space-around;} /*flex-start|flex-end|center|space-between|space-around*/
 .flex-direction{display:flex;flex-direction:column;} /*row|row-reverse|column|column-reverse*/
-.flex{flex:1;}
+.flex{flex:0 1 auto;}
 /* 清除浮动 */
 .clear{zoom:1;}
 .clear:after{content:"";display:block;clear:both;}
-/* iWulai.alert方法专属 */
-#iWulai-auto-alert{width:50%;max-height:80%;overflow:hidden;position:fixed;left:25%;top:10%;right:25%;text-align:center;letter-spacing:0.02rem;z-index:999;}
-#iWulai-auto-alert p{margin:0.08rem auto;padding:var(--padding-value);border-radius:0.08rem;overflow:hidden;}
-#iWulai-auto-alert p.success{background:#00f;color:#fff;}
-#iWulai-auto-alert p.error{background:#f00;color:#fff;}
-/* iWulai.confirm方法专属 */
-#iWulai-confirm{position:fixed;top:0;right:0;bottom:0;left:0;z-index:999;background:rgba(255,255,255,0);}
-#iWulai-confirm div
-{
-    position:fixed;left:50%;top:30%;transform:translate(-50%,-30%);text-align:center;background-color:rgb(255,255,255);
-    box-shadow:rgb(255,0,255) 0 0 0.08rem inset;color: rgb(255,0,0);letter-spacing:0.02rem;border-radius:0.08rem;
-}
-#iWulai-confirm .title{margin:0.18rem 0.3rem;}
-#iWulai-confirm .button{margin-bottom:0.18rem;}
-#iWulai-confirm .confirm{background:rgb(255,0,0);color:rgb(255,255,255);margin-right:0.18rem;}
-#iWulai-confirm .cancel{background:rgb(0,255,0);color:rgb(255,255,255);margin-left:0.18rem;}
-/* 滑动显示与隐藏 */
-.slideDown{animation:slideDown 0.6s;}
-@keyframes slideDown{
-    from{height:0;padding-top:0;padding-bottom:0;}
-    to{height:0.34rem;padding-top:var(--padding-value);padding-bottom:var(--padding-value);}
-}
-.slideUp{animation:slideUp 0.6s;}
-@keyframes slideUp{
-    from{height:0.34rem;padding-top:var(--padding-value);padding-bottom:var(--padding-value);}
-    to{height:0;padding-top:0;padding-bottom:0;}
-}
 /*****    预定义类    *****/

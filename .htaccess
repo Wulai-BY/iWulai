@@ -1,18 +1,19 @@
+# +-------------------------------------------------+ #
+# | Author: iWulai <iwulai@qq.com> <www.iwulai.com> | #
+# +-------------------------------------------------+ #
 <IfModule mod_rewrite.c>
 
 RewriteEngine on
 
-#RewriteCond %{HTTP_HOST} !^$
-#RewriteCond %{HTTP_HOST} !^www\. [NC]
-#RewriteCond %{HTTPS}s ^on(s)|
-#RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#RewriteBase /
+#RewriteCond %{SERVER_PORT} !^443$
+#RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
+#RewriteCond %{HTTP_HOST} ^iwulai.com/ [NC]
+#RewriteRule ^(.*)$ https://www.iwulai.com/$1 [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
-
-#RewriteBase /
-#RewriteCond %{SERVER_PORT} !^443$
-#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
 </IfModule>
