@@ -2,7 +2,6 @@
 /* +-------------------------------------------------+ */
 /* | Author: iWulai <iwulai@qq.com> <www.iwulai.com> | */
 /* +-------------------------------------------------+ */
-/* 初始化标签默认属性 */
 :root{
     --font-size:100px;
 }
@@ -29,22 +28,16 @@ table{width:100%;empty-cells:show;border-collapse:collapse;border-spacing:0;text
 table thead th,table thead td{background:#f4f8fd;}
 table tbody th,table tbody td{border:0.01rem solid #d4d4d4}
 th,td{text-align:center;padding:0.08rem;}
-/* placeholder兼容性处理 */
 ::-webkit-input-placeholder, /* WebKit browsers */
 :-moz-placeholder, /* Mozilla Firefox 4 to 18 */
 ::-moz-placeholder, /* Mozilla Firefox 19+ */
 :-ms-input-placeholder /* Internet Explorer 10+ */
 {color:#999;}
-/*****    预定义类    *****/
-/* 布局专属 */
 #iWulai-viewport{width:100%;height:100%;position:relative;z-index:2;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 #iWulai-view{width:100%;height:auto;position:relative;z-index:3;}
-/* 居中与排列 */
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
 .align-items{display:flex;align-items:stretch;} /*flex-start|flex-end|stretch|baseline|center*/
 .justify-content{display:flex;justify-content:space-around;} /*flex-start|flex-end|center|space-between|space-around*/
 .flex-direction{display:flex;flex-direction:column;} /*row|row-reverse|column|column-reverse*/
 .flex{flex:0 1 auto;}
-/* 清除浮动 */
-.clear{zoom:1;}
-.clear:after{content:"";display:block;clear:both;}
-/*****    预定义类    *****/
