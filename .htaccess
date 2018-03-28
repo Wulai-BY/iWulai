@@ -2,18 +2,32 @@
 # | Author : iWulai <iwulai@qq.com> <www.iwulai.com> | #
 # +--------------------------------------------------+ #
 <IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
 
-RewriteEngine on
+    RewriteEngine On
+    
+    RewriteCond %{HTTP_HOST} ^(iwulai.com|118.24.15.66)
+    RewriteRule ^ https://www.iwulai.com%{REQUEST_URI} [L,R]
+    
+    RewriteCond %{HTTP_HOST} ^iwulai.cn
+    RewriteRule ^ https://www.iwulai.cn%{REQUEST_URI} [L,R]
+    
+    RewriteCond %{SERVER_PORT} !^443$
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 
-#RewriteBase /
-#RewriteCond %{SERVER_PORT} !^443$
-#RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-#RewriteCond %{HTTP_HOST} ^iwulai.com/ [NC]
-#RewriteRule ^(.*)$ https://www.iwulai.com/$1 [L,R=301]
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
-
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
 </IfModule>
