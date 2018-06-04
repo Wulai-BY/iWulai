@@ -18,7 +18,6 @@ sudo apt-get install git
 sudo apt-get install composer
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
-
 /* Ubuntu LNMP 环境搭建 */
 sudo apt-get install nginx
     /* rewrite moddle */
@@ -36,3 +35,9 @@ sudo apt-get install mysql-server
     update user set authentication_string=PASSWORD('newpassword') where user='root';
     update user set plugin='mysql_native_password';
     flush privileges;
+
+/* install chrome browser */
+sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo apt update
+sudo apt install google-chrome-stable
