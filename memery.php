@@ -28,6 +28,7 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml p
     /* swoole */
     sudo apt-get install php7.2-dev php-pear libpq-dev
     sudo pecl channel-update pecl.php.net
+    sudo pecl install redis
     sudo pecl install swoole
     #https://github.com/LinkedDestiny/swoole-doc
 sudo apt-get install mysql-server
