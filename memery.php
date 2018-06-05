@@ -30,6 +30,7 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml p
     sudo pecl channel-update pecl.php.net
     sudo apt-get install libpq-dev
     sudo pecl install swoole
+    #https://github.com/LinkedDestiny/swoole-doc
 sudo apt-get install mysql-server
     /* no password login */     //https://blog.csdn.net/YuYan_wang/article/details/79515940
     update user set authentication_string=PASSWORD('newpassword') where user='root';
