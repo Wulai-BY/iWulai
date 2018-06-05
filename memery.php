@@ -26,9 +26,8 @@ sudo apt-get install nginx
     }
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml php7.2-json php7.2-curl php7.2-gd
     /* swoole */
-    sudo apt-get install php7.2-dev php-pear
+    sudo apt-get install php7.2-dev php-pear libpq-dev
     sudo pecl channel-update pecl.php.net
-    sudo apt-get install libpq-dev
     sudo pecl install swoole
     #https://github.com/LinkedDestiny/swoole-doc
 sudo apt-get install mysql-server
