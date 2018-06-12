@@ -30,6 +30,7 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml p
     sudo pecl channel-update pecl.php.net
     sudo pecl install redis
     sudo pecl install swoole
+        /* composer require --dev 'eaglewu/swoole-ide-helper:dev-master' */
     #https://github.com/LinkedDestiny/swoole-doc
 sudo apt-get install mysql-server
     /* no password login */     //https://blog.csdn.net/YuYan_wang/article/details/79515940
