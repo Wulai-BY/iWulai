@@ -23,6 +23,21 @@ sudo apt-get install nginx
     /* rewrite moddle */
     location / {
         try_files $uri $uri/ /index.php?$query_string;
+        #proxy_pass  http://127.0.0.1:9501;
+        #Proxy Settings
+        #proxy_redirect     off;
+        #proxy_set_header   Host             $host;
+        #proxy_set_header   X-Real-IP        $remote_addr;
+        #proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        #proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+        #proxy_max_temp_file_size 0;
+        #proxy_connect_timeout      90;
+        #proxy_send_timeout         90;
+        #proxy_read_timeout         90;
+        #proxy_buffer_size          4k;
+        #proxy_buffers              4 32k;
+        #proxy_busy_buffers_size    64k;
+        #proxy_temp_file_write_size 64k;
     }
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml php7.2-json php7.2-curl php7.2-gd
     /* swoole */
