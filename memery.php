@@ -24,6 +24,15 @@ sudo apt-get install nginx
     location / {
         try_files $uri $uri/ /index.php?$query_string;
         #proxy_pass  http://127.0.0.1:9501;
+        /* 负载均衡 */
+        upstream iwulai  {
+            server 127.0.0.1:9501 weight=30;
+            server 127.0.0.1:9502 weight=60;
+            server 127.0.0.1:9503 weight=90;
+        }
+        location /iwulai/ {
+            proxy_pass http://iwulai;
+        }
     }
 
     location ~* \.(gif|jpg|jpeg|png|css|js)$ {
