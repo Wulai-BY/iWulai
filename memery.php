@@ -37,7 +37,6 @@ sudo apt-get install nginx
             }
     }
 
-sudo apt-get install mysql-server
 sudo apt-get install redis-server
 sudo apt-get install git
 sudo apt-get install composer
@@ -54,11 +53,22 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml p
         /* composer require --dev 'eaglewu/swoole-ide-helper:dev-master' */
     #https://github.com/LinkedDestiny/swoole-doc
 sudo apt-get install mysql-server
+    [mysql] 
+    default-character-set = utf8mb4 
+    [mysqld] 
+    character-set-client-handshake = FALSE
+    character-set-server = utf8mb4
+    collation-server = utf8mb4_unicode_ci
+    init_connect = 'SET NAMES utf8mb4'
+    SHOW VARIABLES WHERE Variable_name LIKE 'character_set_%' OR Variable_name LIKE 'collation%';
     /* no password login */     //https://blog.csdn.net/YuYan_wang/article/details/79515940
     update user set authentication_string = PASSWORD( 'newpassword' ) where user = 'root';
     update user set plugin = 'mysql_native_password';
     flush privileges;
-
+sudo apt-get install nodejs
+audo apt-get install npm
+    npm config set registry https://registry.npm.taobao.org
+sudo npm install -g vue-cli
 /* install chrome browser */
 sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
