@@ -1,4 +1,16 @@
 <?php
+#阿里源
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
 /* Ubuntu LNMP 环境搭建 */
 sudo apt-get install nginx
     /* rewrite moddle */
