@@ -47,7 +47,7 @@ sudo apt-get update
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml php7.2-json php7.2-curl php7.2-gd
     /* swoole */
-    sudo apt-get install php7.2-dev php-pear libpq-dev
+    sudo apt-get install php7.2-dev php-pear
     sudo pecl channel-update pecl.php.net
     sudo pecl install redis
     sudo pecl install swoole
