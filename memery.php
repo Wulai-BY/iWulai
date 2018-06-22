@@ -1,23 +1,4 @@
 <?php
-/* Ubuntu LAMP 环境搭建 */
-sudo apt-get install apache2
-    /* apache.conf *
-    AddType application/x-httpd-php .php .html
-    AddDefaultCharset utf-8
-    */
-sudo a2enmod ssl
-sudo ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
-sudo apt-get install php7.0
-sudo apt-get install php7.0-mysql
-sudo apt-get install php7.0-mbstring
-sudo apt-get install php7.0-xml
-sudo apt-get install mysql-server mysql-client
-sudo apt-get install libapache2-mod-php7.0
-sudo apt-get install redis-server
-sudo apt-get install git
-sudo apt-get install composer
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
-
 /* Ubuntu LNMP 环境搭建 */
 sudo apt-get install nginx
     /* rewrite moddle */
@@ -44,6 +25,11 @@ sudo apt-get install nginx
             }
     }
 
+sudo apt-get install mysql-server
+sudo apt-get install redis-server
+sudo apt-get install git
+sudo apt-get install composer
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-xml php7.2-json php7.2-curl php7.2-gd
     /* swoole */
     sudo apt-get install php7.2-dev php-pear libpq-dev
