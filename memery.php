@@ -66,6 +66,8 @@ sudo apt-get install mysql-server
     update user set plugin = 'mysql_native_password';
     flush privileges;
 sudo apt-get install nodejs
+    # 使用 nvm 安装nodejs
+    # https://blog.csdn.net/weibo392/article/details/77368550
 audo apt-get install npm
     npm config set registry https://registry.npm.taobao.org
 sudo npm install -g vue-cli
