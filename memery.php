@@ -1,5 +1,9 @@
 <?php
 
+dpkg --get-selections | grep ‘软件相关名称’
+
+sudo apt-get purge 一个带core的package，如果没有带core的package，则是情况而定。
+
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 
 #阿里源
