@@ -6,7 +6,7 @@ server {
     root /var/www/iwulai.com/public;
     index index.php index.html;
 	
-	return 301 https://$server_name$request_uri;
+    return 301 https://$server_name$request_uri;
 
     location / {
         try_files $uri /$uri /index.php?$query_string;
