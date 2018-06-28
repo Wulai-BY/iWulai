@@ -34,8 +34,8 @@ server {
     server_name www.iwulai.com;
 	
     ssl on;
-    ssl_certificate   cert/www.iwulai.com/www.iwulai.com.pem;
-    ssl_certificate_key  cert/www.iwulai.com/www.iwulai.com.key;
+    ssl_certificate   cert/www.iwulai.com/.pem;
+    ssl_certificate_key  cert/www.iwulai.com/.key;
     ssl_session_timeout 5m;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
