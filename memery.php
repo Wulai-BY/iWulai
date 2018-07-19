@@ -5,6 +5,7 @@ dpkg --get-selections | grep ‘软件相关名称’
 sudo apt-get purge 一个带core的package，如果没有带core的package，则是情况而定。
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+https://blog.csdn.net/h330531987/article/details/79090555 laravel/redis
 
 #阿里源
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
