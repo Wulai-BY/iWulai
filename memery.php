@@ -7,6 +7,8 @@ sudo apt-get purge 一个带core的package，如果没有带core的package，则
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 https://blog.csdn.net/h330531987/article/details/79090555 laravel/redis
 
+sudo mount -t vboxsf www /www
+
 #阿里源
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
