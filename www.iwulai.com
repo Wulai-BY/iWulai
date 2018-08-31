@@ -31,7 +31,7 @@ server {
 
     listen 443;
     charset utf-8;
-    server_name www.iwulai.com;
+    server_name local.iwulai.com;
 	
     ssl on;
     ssl_certificate   cert/www.iwulai.com/.pem;
