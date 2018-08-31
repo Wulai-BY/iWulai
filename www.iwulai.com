@@ -2,19 +2,19 @@ server {
 
     listen 80;
     charset utf-8;
-    server_name www.iwulai.com;
-    root /var/www/iwulai.com/public;
-    index index.php index.html;
+    server_name local.iwulai.com;
+    root /www/html/iwulai/public;
+    index index.php;
 	
     return 301 https://$server_name$request_uri;
 
     location / {
-        try_files $uri /$uri /index.php?$query_string;
+        try_files $uri $uri/ /index.php?$query_string;
     }
 
     location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+        include fastcgi.conf;
+        fastcgi_pass unix:/www/run/php-fpm.sock;
         fastcgi_buffers 16 16k;
         fastcgi_buffer_size 32k;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -41,16 +41,16 @@ server {
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
 	
-    root /var/www/iwulai.com/public;
-    index index.php index.html;
+    root /www/html/iwulai/public;
+    index index.php;
 
     location / {
-        try_files $uri /$uri /index.php?$query_string;
+        try_files $uri $uri/ /index.php?$query_string;
     }
 
     location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+        include fastcgi.conf;
+        fastcgi_pass unix:/www/run/php-fpm.sock;
         fastcgi_buffers 16 16k;
         fastcgi_buffer_size 32k;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
