@@ -1,41 +1,129 @@
 @charset "utf-8";
-/* +--------------------------------------------------+ */
-/* | Author : iWulai <iwulai@qq.com> <www.iwulai.com> | */
-/* +--------------------------------------------------+ */
-:root{--font-size:100px;}
-*{margin:0;padding:0;box-sizing:border-box;box-shadow:none;}
-html{font-size:100px;width:100%;height:100%;overflow:hidden;}
-body{width:100%;height:100%;overflow:hidden;position:relative;z-index:1;}
-body,body a,input,textarea,button,select,option{font:0.14rem/1.4 "Microsoft YaHei",Arial;color:#333;}
-ul,ol,li{list-style:none;}
-input,textarea,button,select{border:none;outline:none;background:none;display:inline-block;-webkit-appearance:none;}
-label.disabled,input:disabled,textarea:disabled,button:disabled{background:#eee !important;cursor:not-allowed !important;}
-select{border:0.01rem solid #d4d4d4;border-radius:0.03rem;padding:0.04rem;}
-input[type="text"],input[type="password"]{padding:0.04rem 0.08rem;border:0.01rem solid #d4d4d4;border-radius:0.03rem;width:1.80rem;}
-input[type="text"]:focus,input[type="password"]:focus,textarea:focus{border-color:#38f;}
-input[type="button"],input[type="submit"],input[type="reset"],button{padding:0.04rem 0.08rem;border-radius:0.03rem;}
-input[type="button"],input[type="submit"],input[type="reset"],input[type="radio"],input[type="checkbox"],button{cursor:pointer;}
-input[type="checkbox"]{width:0.13rem;height:0.13rem;}
-label input[type="radio"],label input[type="checkbox"]{vertical-align:-0.015rem;}
-textarea{resize:none;padding:0.06rem 0.08rem;border:0.01rem solid #d4d4d4;border-radius:0.03rem;}
-img{border:none;vertical-align:middle;max-width:100%;}
-a{text-decoration:none;-webkit-tap-highlight-color:rgba(100,100,255,0.5);}
-i{font-style:normal;}
-b{font-weight:normal;}
-table{width:100%;empty-cells:show;border-collapse:collapse;border-spacing:0;text-align:center;border:0.01rem solid #d4d4d4;}
-table thead th,table thead td{background:#f4f8fd;}
-table tbody th,table tbody td{border:0.01rem solid #d4d4d4}
-th,td{text-align:center;padding:0.08rem;}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+html{
+  font-size: 100px;
+}
+body{
+  position: relative;
+  z-index: 1;
+}
+body,body a,input,textarea,button,select,option{
+  font: 0.14rem/1.4 "Microsoft YaHei",Arial;
+  color: #333;
+}
+ul,ol,li{
+  list-style: none;
+}
+input,textarea,button,select{
+  border: none;
+  outline: none;
+  background: none;
+  display: inline-block;
+  -webkit-appearance: none;
+}
+input:disabled,
+textarea:disabled,
+button:disabled{
+  background: #eee !important;
+  cursor: not-allowed !important;
+}
+select{
+  border: 0.01rem solid #d4d4d4;
+  border-radius: 0.03rem;
+  padding: 0.04rem;
+}
+input[type="text"],
+input[type="password"]{
+  padding: 0.04rem 0.08rem;
+  border: 0.01rem solid #d4d4d4;
+  border-radius: 0.03rem;
+  width: 1.80rem;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus{
+  border-color:#38f;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+  padding: 0.04rem 0.08rem;
+  border-radius: 0.03rem;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="radio"],
+input[type="checkbox"],
+button{
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  width: 0.13rem;
+  height: 0.13rem;
+}
+label input[type="radio"],
+label input[type="checkbox"]{
+  vertical-align: -0.015rem;
+}
+textarea{
+  resize: none;
+  padding: 0.06rem 0.08rem;
+  border: 0.01rem solid #d4d4d4;
+  border-radius: 0.03rem;
+}
+img{
+  border: none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(100,100,255,0.5);
+}
+i{
+  font-style: normal;
+}
+b{
+  font-weight: normal;
+}
+table{
+  width: 100%;
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  border: 0.01rem solid #d4d4d4;
+}
+table thead th,
+table thead td{
+  background: #f4f8fd;
+}
+table tbody th,
+table tbody td{
+  border: 0.01rem solid #d4d4d4
+}
+th,td{
+  text-align: center;
+  padding: 0.08rem;
+}
 ::-webkit-input-placeholder, /* WebKit browsers */
 :-moz-placeholder, /* Mozilla Firefox 4 to 18 */
 ::-moz-placeholder, /* Mozilla Firefox 19+ */
 :-ms-input-placeholder /* Internet Explorer 10+ */
 {color:#999;}
-#iWulai-viewport{width:100%;height:100%;position:relative;z-index:2;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
-#iWulai-view{width:100%;height:auto;position:relative;z-index:3;}
-.clear{zoom:1;}
-.clear:after{content:"";display:block;clear:both;}
-.align-items{display:flex;align-items:stretch;} /*flex-start|flex-end|stretch|baseline|center*/
-.justify-content{display:flex;justify-content:space-around;} /*flex-start|flex-end|center|space-between|space-around*/
-.flex-direction{display:flex;flex-direction:column;} /*row|row-reverse|column|column-reverse*/
-.flex{flex:0 1 auto;}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  content: "";
+  display: block;
+  clear: both;
+}
